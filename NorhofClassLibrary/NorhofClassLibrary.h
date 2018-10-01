@@ -1,0 +1,37 @@
+// NorhofClassLibrary.h
+
+#pragma once
+
+using namespace System;
+
+namespace NorhofClassLibrary {
+
+	public ref class NorhofDevice
+	{
+		// TODO: Add your methods for this class here.
+		public:
+			NorhofDevice(String^ name, short port_name);
+			~NorhofDevice();
+			Pump913drv::ConnectorClass^ gConn;
+			Pump913drv::PumpMonitor^ gDrv;
+
+			String^ scpi_query(String^ scpi_cmd);
+			bool is_connected();
+
+			virtual property String^ name {String^ get(); };
+			virtual property String^ info {String^ get(); };
+			virtual property String^ serial_number {String^ get(); };
+			virtual property String^ pump_status {String^ get(); };
+			virtual property String^ pump_mode {String^ get(); };
+			virtual property int control { int get(); void set(int value); };
+			virtual property double temp { double get(); void set(double value); };
+			virtual property double flow { double get(); void set(double value); };
+
+		private:
+			bool m_connected;
+			short m_port_num;
+			String^ m_name;
+
+			String^ ExecSCPI(String^ cmd, String^ arg);
+	};
+}
