@@ -20,9 +20,20 @@ String^ NorhofClassLibrary::NorhofDevice::name::get()
 	return this->m_name;
 }
 
-String^ NorhofClassLibrary::NorhofDevice::info::get()
+String^ NorhofClassLibrary::NorhofDevice::idn::get()
 {
-	return this->gDrv->PumpInfo;
+	array<String^>^ delimiter = { ":" };
+	array<String^>^ space = { " " };
+	array<String^>^ cr = { "\r" };
+	array<String^>^ words;
+
+	String^ token = this->gDrv->PumpInfo;
+	words = token->Split(delimiter, System::StringSplitOptions::RemoveEmptyEntries);
+	String^ company = words[1]->Split(space, System::StringSplitOptions::RemoveEmptyEntries)[0];
+	String^ model = words[1]->Split(space, System::StringSplitOptions::RemoveEmptyEntries)[1];
+	String^ version = words[2]->Split(cr, System::StringSplitOptions::RemoveEmptyEntries)[0]->Remove(0, 1)->Remove(9, 9);
+	String^ date = words[3]->Split(cr, System::StringSplitOptions::RemoveEmptyEntries)[0]->Remove(0, 4)->Remove(5, 1);
+	return (company + "," + model + "," + version + "- " + date + ",");
 }
 
 String^ NorhofClassLibrary::NorhofDevice::serial_number::get()
@@ -89,20 +100,9 @@ void NorhofClassLibrary::NorhofDevice::flow::set(double flow_set)
 	bool success = this->gDrv->RS232Set[Pump913drv::RScon::rscFlow, flow_set];
 }
 
-String^ GetSubcommand(String^ cmd, int nested=2)
-{
-	char delimiter = ':';
-	array<String^>^ words;
-	words = cmd->Split(delimiter);
-	Console::WriteLine("Subcommand {0}", words[nested]);
-	return words[nested];
-}
-
 array<String^>^ ParseCommand(String^ cmd)
 {
-	//array<String^>^ cmd_delim = { ":" };
 	char cmd_delim = ':';
-	//array<String^>^ cmds = cmd->Split(cmd_delim, System::StringSplitOptions::RemoveEmptyEntries);
 	array<String^>^ cmds = cmd->Split(cmd_delim);
 	return cmds;
 }
@@ -117,10 +117,10 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 {
 
 	String^ result;
-	Console::WriteLine("Command {0} has rank {1}.", cmd, GetCommandRank(cmd));
+	//Console::WriteLine("Command {0} has rank {1}.", cmd, GetCommandRank(cmd));
 	if (GetCommandRank(cmd) == 0)
 	{
-		if (cmd->StartsWith("*IDN")) { result = serial_number; }
+		if (cmd->StartsWith("*IDN")) { result = idn; }
 	}
 	else if (GetCommandRank(cmd) == 1 && arg != nullptr)
 	{
@@ -145,12 +145,11 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 	else if (GetCommandRank(cmd) == 2 && arg == nullptr)
 	{
 		array<String^>^ cmds = ParseCommand(cmd);
-		Console::WriteLine("{0} and {1}", cmds[0], cmds[1]);
-
+		
 		if (cmds[1]->StartsWith("SYS"))
 		{
 			if (cmds[2] == "NAME") { result = name; }
-			else if (cmds[2] == "INFO") { result = info; }
+			else if (cmds[2] == "SN") { result = serial_number; }
 			else if (cmds[2] == "STATUS") { result = pump_status; }
 		}
 		else if (cmds[1]->StartsWith("MEAS"))
@@ -174,20 +173,19 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 
 String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 {
-	//String^ answer = gcnew String("None");
 	array<String^>^ cmd_delim = { ";" };
 	String^ arg;
 	String^ answer;
 	String^ result;
 
-	Console::WriteLine("RAW SCPI command: {0}", scpi_cmd);
+	Console::WriteLine("SCPI command received: {0}", scpi_cmd);
 	
 	// Support for multiple SCPI commands
 	array<String^>^ cmds = scpi_cmd->Split(cmd_delim, System::StringSplitOptions::RemoveEmptyEntries);
 	
 	for each (String^ cmd in cmds)
 	{
-		Console::WriteLine("*** Processing SCPI command {0}",cmd);
+		//Console::WriteLine("*** Processing SCPI command {0}",cmd);
 		// Protect from bad-formatted commands
 		if (!(cmd[0].Equals(':') || cmd[0].Equals('*')))
 		{
@@ -201,7 +199,7 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 		{
 			cmd = cmd->Substring(0, cmd->Length - 1);
 			query = true;
-			//Console::WriteLine("Its a Query!");
+
 		}
 		else // Maybe has argument?
 		{
@@ -210,27 +208,23 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 			{
 				arg = parts[1];
 				cmd = parts[0];
-				Console::WriteLine("Argument {0}", arg);
 			}
 			catch (Exception^ e)
 			{
 				arg = nullptr;
-				Console::WriteLine("No argument found");
-				//Console::WriteLine(e.ToString);
+				//Console::WriteLine("No argument found");
 			}
 		}
 
-		Console::WriteLine("Command: {0}", cmd);
+		//Console::WriteLine("Command: {0}", cmd);
 
 		// Execute command and store results in String
 		result = ExecSCPI(cmd, arg);
 		answer += result + ";";
 	}
-	Console::WriteLine("Length is {0}", cmds->Length);
+	
 	if (cmds->Length == 1)
 		answer = answer->Substring(0, answer->Length - 1);
-	Console::WriteLine("Answer is {0}", answer);
-	return answer;
 	
+	return answer;
 }
-

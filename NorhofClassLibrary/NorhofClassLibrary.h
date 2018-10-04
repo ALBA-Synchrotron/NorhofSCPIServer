@@ -19,7 +19,7 @@ namespace NorhofClassLibrary {
 			bool is_connected();
 
 			virtual property String^ name {String^ get(); };
-			virtual property String^ info {String^ get(); };
+			virtual property String^ idn {String^ get(); };
 			virtual property String^ serial_number {String^ get(); };
 			virtual property String^ pump_status {String^ get(); };
 			virtual property String^ pump_mode {String^ get(); };

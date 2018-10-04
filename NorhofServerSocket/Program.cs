@@ -30,8 +30,7 @@ namespace NorhofServerSocket
         // Thread signal.  
         public static ManualResetEvent allDone = new ManualResetEvent(false);
 
-        //
-        public static NorhofDevice device = new NorhofDevice("my device", 3);
+        public static NorhofDevice device = new NorhofDevice("Norhof 915 Pump", 3);
 
         public AsynchronousSocketListener()
         {
@@ -56,6 +55,7 @@ namespace NorhofServerSocket
             {
                 listener.Bind(localEndPoint);
                 listener.Listen(100);
+                Console.WriteLine("Server started...waiting for incoming connections...");
 
                 while (true)
                 {
@@ -63,7 +63,7 @@ namespace NorhofServerSocket
                     allDone.Reset();
 
                     // Start an asynchronous socket to listen for connections.  
-                    Console.WriteLine("Waiting for a connection...");
+                    // Console.WriteLine("Waiting for a connection...");
                     listener.BeginAccept(
                         new AsyncCallback(AcceptCallback),
                         listener);
@@ -122,10 +122,10 @@ namespace NorhofServerSocket
                 {
                     // All the data has been read from the   
                     // client. Display it on the console.  
-                    Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
-                        content.Length, content);
+                    // Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
+                    //    content.Length, content);
                     // Echo the data back to the client.  
-                    //Send(handler, content);
+                    // Send(handler, content);
                     // Parse command and return answer.
                     ParseAsSCPI(handler, content);
                 }
@@ -158,7 +158,7 @@ namespace NorhofServerSocket
 
                 // Complete sending the data to the remote device.  
                 int bytesSent = handler.EndSend(ar);
-                Console.WriteLine("Sent {0} bytes to client.", bytesSent);
+                // Console.WriteLine("Sent {0} bytes to client.", bytesSent);
 
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
@@ -178,10 +178,8 @@ namespace NorhofServerSocket
             String answer = device.scpi_query(data);
 
             // Convert bytes sent to ASCII for debugging.
-            Console.WriteLine("SCPI answer received: {0}.", answer);
-
-
-
+            Console.WriteLine("SCPI answer received: {0}", answer);
+            
             // Convert the string data to byte data using ASCII encoding.  
             byte[] byteData = Encoding.ASCII.GetBytes(answer);
 
@@ -189,8 +187,7 @@ namespace NorhofServerSocket
             handler.BeginSend(byteData, 0, byteData.Length, 0,
                 new AsyncCallback(SendCallback), handler);
         }
-
-
+        
         public static int Main(String[] args)
         {
             StartListening();

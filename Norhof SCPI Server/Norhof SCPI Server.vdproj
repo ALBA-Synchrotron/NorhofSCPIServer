@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Norhof Server"
+"ProjectName" = "8:Norhof SCPI Server Application"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -58,25 +58,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5E0C2D5F3EEC78FD0F71C257FD50C316"
+        "OwnerKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_343C100CDE3BDA04B0C67BF426EDC6D8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5E0C2D5F3EEC78FD0F71C257FD50C316"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -87,7 +87,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Norhof Server.msi"
+        "OutputFilename" = "8:Debug\\Norhof SCPI Server.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -97,13 +97,29 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Norhof Server.msi"
+        "OutputFilename" = "8:Release\\Norhof SCPI Server.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -113,6 +129,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -149,11 +181,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.Pump913drv.1.2, Version=1.2.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_343C100CDE3BDA04B0C67BF426EDC6D8"
-                    {
-                    "Name" = "8:Interop.Pump913drv.1.2.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.Pump913drv.1.2.dll"
             "TargetName" = "8:"
@@ -177,14 +204,9 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NorhofClassLibrary, Version=1.0.6848.19772, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:NorhofClassLibrary, Version=1.0.6850.28128, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_5E0C2D5F3EEC78FD0F71C257FD50C316"
-                    {
-                    "Name" = "8:NorhofClassLibrary.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NorhofClassLibrary.dll"
             "TargetName" = "8:"
@@ -231,11 +253,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_CC4164909A60D66886C1778E7C8A2706"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -310,9 +327,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Norhof Server"
+        "ProductName" = "8:Norhof SCPI Server"
         "ProductCode" = "8:{7AE5C589-2C2B-4E39-ACFF-A00533997DAA}"
-        "PackageCode" = "8:{B5AA1982-F50A-43BD-A159-0B0A3B9FF940}"
+        "PackageCode" = "8:{1A3DFD23-D89D-4504-86E1-5FD604207684}"
         "UpgradeCode" = "8:{8A11914D-B0A6-40DD-A32B-FABE591C9E35}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -323,7 +340,7 @@
         "Manufacturer" = "8:ALBA"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Norhof Server"
+        "Title" = "8:Norhof SCPI Server"
         "Subject" = "8:"
         "ARPCONTACT" = "8:jandreu@cells.es"
         "Keywords" = "8:"
@@ -833,7 +850,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_05CFAC9306464887B70EFE98D747A922"
             {
-            "SourcePath" = "8:..\\NorhofServerSocket\\obj\\Release\\NorhofServerSocket.exe"
+            "SourcePath" = "8:..\\NorhofServerSocket\\obj\\Release\\NorhofSCPIServer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
