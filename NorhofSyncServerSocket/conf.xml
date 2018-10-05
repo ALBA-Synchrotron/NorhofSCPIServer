@@ -1,0 +1,4 @@
+<NorhofPump>
+  <SCPIServer type="sync" port="11000" serial_com="3">
+  </SCPIServer>
+</NorhofPump>

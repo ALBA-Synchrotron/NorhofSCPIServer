@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,9 +10,48 @@ using System.Net.Sockets;
 
 using NorhofClassLibrary;
 
-
-namespace NorhofServerSocket
+namespace NorhofAsyncServerSocket
 {
+    public class Connection
+    {
+        public String server_name;
+        public String server_type;
+        public short port = 0;
+        public short serial_com = 0;
+
+        public Connection()
+        {
+            try
+            {
+                String filename = "conf.xml";
+                XDocument conf = XDocument.Load(filename);
+                
+                foreach (XElement el in conf.Root.Elements())
+                {
+                    server_name = el.Name.ToString();
+                    server_type = el.Attribute("type").Value;
+
+                    if (server_name == "SCPIServer" && server_type == "async")
+                    {
+                        port = System.Convert.ToInt16(el.Attribute("port").Value);
+                        serial_com = System.Convert.ToInt16(el.Attribute("serial_com").Value);
+                        break;
+                    }
+                    
+                }
+                if (port == 0)
+                {
+                    throw new Exception("Invalid server type. Valid values are sync or async.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception when loading configuration file\n{0}", e);
+                System.Environment.Exit(1);
+            }
+        }
+    }
+
     // State object for reading client data asynchronously  
     public class StateObject
     {
@@ -27,15 +67,11 @@ namespace NorhofServerSocket
 
     public class AsynchronousSocketListener
     {
-        // Thread signal.  
         public static ManualResetEvent allDone = new ManualResetEvent(false);
+        public static Connection con = new Connection();
+        public static NorhofDevice device = new NorhofDevice(con.server_name, con.serial_com);
 
-        public static NorhofDevice device = new NorhofDevice("Norhof 915 Pump", 3);
-
-        public AsynchronousSocketListener()
-        {
-        //    Thread.Sleep(3000);
-        }
+        public AsynchronousSocketListener() {}
 
         public static void StartListening()
         {
@@ -44,7 +80,7 @@ namespace NorhofServerSocket
             // running the listener is "host.contoso.com".  
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[2];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, con.port);
 
             // Create a TCP/IP socket.  
             Socket listener = new Socket(ipAddress.AddressFamily,
@@ -55,23 +91,19 @@ namespace NorhofServerSocket
             {
                 listener.Bind(localEndPoint);
                 listener.Listen(100);
-                Console.WriteLine("Server started...waiting for incoming connections...");
+                Console.WriteLine("Norhof {0} {1} started, Port: {2}, COM: {3}", con.server_type, con.server_name, con.port, con.serial_com);
+                Console.WriteLine("waiting for incoming connections...") ;
 
                 while (true)
                 {
                     // Set the event to nonsignaled state.  
                     allDone.Reset();
-
                     // Start an asynchronous socket to listen for connections.  
-                    // Console.WriteLine("Waiting for a connection...");
                     listener.BeginAccept(
-                        new AsyncCallback(AcceptCallback),
-                        listener);
-
+                        new AsyncCallback(AcceptCallback), listener);
                     // Wait until a connection is made before continuing.  
                     allDone.WaitOne();
                 }
-
             }
             catch (Exception e)
             {
@@ -118,15 +150,10 @@ namespace NorhofServerSocket
                 // Check for end-of-file tag. If it is not there, read   
                 // more data.  
                 content = state.sb.ToString();
-                if (content.IndexOf("<EOF>") > -1)
+                if (content.IndexOf("\n") > -1)
                 {
                     // All the data has been read from the   
-                    // client. Display it on the console.  
-                    // Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
-                    //    content.Length, content);
-                    // Echo the data back to the client.  
-                    // Send(handler, content);
-                    // Parse command and return answer.
+                    // client.
                     ParseAsSCPI(handler, content);
                 }
                 else
@@ -137,7 +164,6 @@ namespace NorhofServerSocket
                 }
             }
         }
-
 
         private static void Send(Socket handler, String data)
         {
@@ -158,8 +184,6 @@ namespace NorhofServerSocket
 
                 // Complete sending the data to the remote device.  
                 int bytesSent = handler.EndSend(ar);
-                // Console.WriteLine("Sent {0} bytes to client.", bytesSent);
-
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
 
@@ -172,9 +196,8 @@ namespace NorhofServerSocket
 
         private static void ParseAsSCPI(Socket handler, String data)
         {
-            // remove <EOF> delimiter
-            data = data.Substring(0, data.Length - 5);
-
+            // remove \n delimiter
+            data = data.Substring(0, data.Length - 2);
             String answer = device.scpi_query(data);
 
             // Convert bytes sent to ASCII for debugging.

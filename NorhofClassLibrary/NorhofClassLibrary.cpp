@@ -190,6 +190,7 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 		if (!(cmd[0].Equals(':') || cmd[0].Equals('*')))
 		{
 			Console::WriteLine("Bad-formatted command!");
+			Console::WriteLine(cmd);
 			return "None";
 		}
 

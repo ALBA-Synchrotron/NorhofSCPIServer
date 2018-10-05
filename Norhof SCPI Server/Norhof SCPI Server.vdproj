@@ -21,20 +21,50 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_343C100CDE3BDA04B0C67BF426EDC6D8"
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
         "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_343C100CDE3BDA04B0C67BF426EDC6D8"
-        "OwnerKey" = "8:_5E0C2D5F3EEC78FD0F71C257FD50C316"
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5E0C2D5F3EEC78FD0F71C257FD50C316"
-        "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_96CEF3376E4F95A4A170F2F04F3E2FA1"
+        "OwnerKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,18 +75,66 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BBEF6B276B478D209F64724B658FC0B2"
-        "OwnerKey" = "8:_343C100CDE3BDA04B0C67BF426EDC6D8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
         "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F5E6964293BC48F3B72163C1B2FDE5D6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_05CFAC9306464887B70EFE98D747A922"
         "MsmSig" = "8:_UNDEFINED"
@@ -64,19 +142,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_343C100CDE3BDA04B0C67BF426EDC6D8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5E0C2D5F3EEC78FD0F71C257FD50C316"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -174,13 +270,18 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_343C100CDE3BDA04B0C67BF426EDC6D8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2EB5287AD3D49289BDCFE45F41BB49D1"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Interop.Pump913drv.1.2, Version=1.2.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
+                    "_2EB5287AD3D49289BDCFE45F41BB49D1"
+                    {
+                    "Name" = "8:Interop.Pump913drv.1.2.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Interop.Pump913drv.1.2.dll"
             "TargetName" = "8:"
@@ -200,33 +301,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5E0C2D5F3EEC78FD0F71C257FD50C316"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:NorhofClassLibrary, Version=1.0.6850.28128, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:NorhofClassLibrary.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBEF6B276B478D209F64724B658FC0B2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96CEF3376E4F95A4A170F2F04F3E2FA1"
             {
             "SourcePath" = "8:Pump913drv.exe"
             "TargetName" = "8:Pump913drv.exe"
@@ -253,6 +328,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_CC4164909A60D66886C1778E7C8A2706"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -270,6 +350,57 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D195B2378E379B03DDFD80C036550324"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:NorhofClassLibrary, Version=1.0.6851.28494, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_D195B2378E379B03DDFD80C036550324"
+                    {
+                    "Name" = "8:NorhofClassLibrary.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:NorhofClassLibrary.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5E6964293BC48F3B72163C1B2FDE5D6"
+            {
+            "SourcePath" = "8:..\\conf.xml"
+            "TargetName" = "8:conf.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -850,7 +981,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_05CFAC9306464887B70EFE98D747A922"
             {
-            "SourcePath" = "8:..\\NorhofServerSocket\\obj\\Release\\NorhofSCPIServer.exe"
+            "SourcePath" = "8:..\\NorhofAsyncServerSocket\\obj\\Debug\\NorhofAsyncServerSocket.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
@@ -932,6 +1063,62 @@
                 {
                 }
             }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_52DDDB0704AC4ADABC74935531D1F51D"
+            {
+            "SourcePath" = "8:..\\NorhofSyncServerSocket\\obj\\Debug\\NorhofSyncServerSocket.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{D6579F1F-83EB-4C56-A123-420D91310EB1}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E1F0001B62740438141643B140F2F68"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
+            "OutputProjectGuid" = "8:{45B5C979-0900-40D2-8F40-481663CBD41F}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E7E6F8A42CC45F4A707972D9D604FF0"
             {
             "SourcePath" = "8:"
@@ -960,9 +1147,37 @@
                 {
                 }
             }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9FEBB2DBE9B44B668650041EC51B4127"
+            {
+            "SourcePath" = "8:..\\NorhofSyncServerSocket\\obj\\Debug\\NorhofSyncServerSocket.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{D6579F1F-83EB-4C56-A123-420D91310EB1}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B1B646DEFCAD44D28E7BE08447AE0DE4"
             {
-            "SourcePath" = "8:..\\Release\\NorhofClassLibrary.dll"
+            "SourcePath" = "8:..\\Debug\\NorhofClassLibrary.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
@@ -1011,6 +1226,34 @@
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
             "OutputProjectGuid" = "8:{6AB14B5D-BDEB-435F-A5EB-B5743A41914D}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ED09FF4C19D74C0FB7C679E266C98EC3"
+            {
+            "SourcePath" = "8:..\\NorhofSyncServerSocket\\obj\\Debug\\NorhofSyncServerSocket.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6EF1895CFDB94D0794D0F1863F385E9D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{D6579F1F-83EB-4C56-A123-420D91310EB1}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
