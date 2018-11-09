@@ -197,11 +197,11 @@ namespace NorhofAsyncServerSocket
         private static void ParseAsSCPI(Socket handler, String data)
         {
             // remove \n delimiter
-            data = data.Substring(0, data.Length - 2);
+            data = data.Substring(0, data.Length - 1);
             String answer = device.scpi_query(data);
 
             // Convert bytes sent to ASCII for debugging.
-            Console.WriteLine("SCPI answer received: {0}", answer);
+            //Console.WriteLine("SCPI answer received: {0}", answer);
             
             // Convert the string data to byte data using ASCII encoding.  
             byte[] byteData = Encoding.ASCII.GetBytes(answer);

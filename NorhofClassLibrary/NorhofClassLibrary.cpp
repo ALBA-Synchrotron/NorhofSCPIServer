@@ -178,11 +178,11 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 	String^ answer;
 	String^ result;
 
-	Console::WriteLine("SCPI command received: {0}", scpi_cmd);
+	Console::WriteLine("Processing SCPI command(s): {0}", scpi_cmd);
 	
 	// Support for multiple SCPI commands
 	array<String^>^ cmds = scpi_cmd->Split(cmd_delim, System::StringSplitOptions::RemoveEmptyEntries);
-	
+	Console::WriteLine("Command(s): <{0}>", cmds);
 	for each (String^ cmd in cmds)
 	{
 		//Console::WriteLine("*** Processing SCPI command {0}",cmd);
@@ -209,6 +209,8 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 			{
 				arg = parts[1];
 				cmd = parts[0];
+				//Console::WriteLine("Command = {0}", cmd);
+				//Console::WriteLine("Argument = {0}", arg);
 			}
 			catch (Exception^ e)
 			{
@@ -226,6 +228,6 @@ String^ NorhofClassLibrary::NorhofDevice::scpi_query(String^ scpi_cmd)
 	
 	if (cmds->Length == 1)
 		answer = answer->Substring(0, answer->Length - 1);
-	
+	Console::WriteLine("Answer(s): <{0}>", answer);
 	return answer;
 }
