@@ -128,7 +128,6 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 		{
 			if (cmd->StartsWith(":TEMP")) { temp = System::Convert::ToDouble(arg); }
 			else if (cmd->StartsWith(":FLOW")) { flow = System::Convert::ToDouble(arg); }
-			else if (cmd->StartsWith(":CONTROL")) { control = System::Convert::ToInt32(arg); }
 			else
 			{
 				Console::WriteLine("Non implemented command or invalid format.");
@@ -167,7 +166,23 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 				result = "None";
 			}
 	}
+	else if (GetCommandRank(cmd) == 2 && arg != nullptr)
+	{
+		array<String^>^ cmds = ParseCommand(cmd);
 
+		if (cmds[1]->StartsWith("PUMP"))
+		{
+	        if (cmds[2] == "CONTROL") { control = System::Convert::ToInt32(arg); }
+			else
+			{
+				Console::WriteLine("Non implemented command or invalid format.");
+				result = "None";
+			}
+
+			result = true.ToString();
+		}
+
+	}
 	return result;
 }
 
