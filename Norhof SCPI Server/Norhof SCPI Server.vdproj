@@ -28,13 +28,7 @@
         "Entry"
         {
         "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
-        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
-        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +40,13 @@
         "Entry"
         {
         "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
-        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2EB5287AD3D49289BDCFE45F41BB49D1"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
-        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,7 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
-        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,7 +106,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
-        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D195B2378E379B03DDFD80C036550324"
-        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,25 +142,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "OwnerKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -172,7 +154,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CC4164909A60D66886C1778E7C8A2706"
+        "OwnerKey" = "8:_D195B2378E379B03DDFD80C036550324"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_52DDDB0704AC4ADABC74935531D1F51D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9FEBB2DBE9B44B668650041EC51B4127"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_ED09FF4C19D74C0FB7C679E266C98EC3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -277,11 +277,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.Pump913drv.1.2, Version=1.2.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_2EB5287AD3D49289BDCFE45F41BB49D1"
-                    {
-                    "Name" = "8:Interop.Pump913drv.1.2.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.Pump913drv.1.2.dll"
             "TargetName" = "8:"
@@ -328,11 +323,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_CC4164909A60D66886C1778E7C8A2706"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -359,11 +349,6 @@
             "AssemblyAsmDisplayName" = "8:NorhofClassLibrary, Version=1.0.6887.13627, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_D195B2378E379B03DDFD80C036550324"
-                    {
-                    "Name" = "8:NorhofClassLibrary.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NorhofClassLibrary.dll"
             "TargetName" = "8:"
@@ -459,15 +444,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Norhof SCPI Server"
-        "ProductCode" = "8:{6234404F-A849-4FAC-8EC6-3360D92F4652}"
-        "PackageCode" = "8:{93BD393C-3268-4521-AFB6-EA5A9FC1A257}"
+        "ProductCode" = "8:{60DF10C8-27E6-4AD6-BE4F-4BA1F17AAFF3}"
+        "PackageCode" = "8:{3DA43FFE-A2C0-49CB-BABB-A3F66664C31F}"
         "UpgradeCode" = "8:{8A11914D-B0A6-40DD-A32B-FABE591C9E35}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:ALBA"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
