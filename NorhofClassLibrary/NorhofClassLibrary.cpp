@@ -78,6 +78,32 @@ void NorhofClassLibrary::NorhofDevice::control::set(int value)
 	
 }
 
+// Returns the pressure in bar.
+double NorhofClassLibrary::NorhofDevice::pressure_in::get()
+{
+	return System::Convert::ToDouble(
+				this->gDrv->ADC::get(Pump913drv::Sensor::snPressure, Pump913drv::Result::rsMbar)
+		);
+}
+
+// Returns the vessel in Celcius.
+double NorhofClassLibrary::NorhofDevice::vessel_temp::get()
+{
+	return System::Convert::ToDouble(
+				this->gDrv->ADC::get(Pump913drv::Sensor::snVessel, Pump913drv::Result::rsTemprature)
+		);
+}
+
+// Returns the extra sensor in Celcius.
+double NorhofClassLibrary::NorhofDevice::extrasn_temp::get()
+{
+
+	return System::Convert::ToDouble(
+		this->gDrv->ADC::get(Pump913drv::Sensor::snextra, Pump913drv::Result::rsTemprature)
+		);
+
+}
+
 // Returns the set temperature in Celcius.
 double NorhofClassLibrary::NorhofDevice::temp::get()
 {
@@ -155,6 +181,9 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 		{
 			if (cmds[2] == "TEMP") { result = temp.ToString(); }
 			else if (cmds[2] == "FLOW") { result = flow.ToString(); }
+			else if (cmds[2] == "VESSEL_TEMP") { result = vessel_temp.ToString(); }
+			else if (cmds[2] == "EXTRASN_TEMP") { result = extrasn_temp.ToString(); }
+           // else if (cmds[2] == "PRESSURE_IN") { result = pressure_in.ToString(); }
 		}
 		else if (cmds[1]->StartsWith("PUMP"))
 

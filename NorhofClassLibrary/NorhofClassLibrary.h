@@ -26,6 +26,9 @@ namespace NorhofClassLibrary {
 			virtual property int control { int get(); void set(int value); };
 			virtual property double temp { double get(); void set(double value); };
 			virtual property double flow { double get(); void set(double value); };
+			virtual property double vessel_temp { double get(); };
+		    virtual property double pressure_in { double get(); };
+			virtual property double extrasn_temp { double get(); };
 
 		private:
 			bool m_connected;
