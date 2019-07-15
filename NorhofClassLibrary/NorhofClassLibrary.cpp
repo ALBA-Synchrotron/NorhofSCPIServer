@@ -183,7 +183,7 @@ String^ NorhofClassLibrary::NorhofDevice::ExecSCPI(String^ cmd, String^ arg)
 			else if (cmds[2] == "FLOW") { result = flow.ToString(); }
 			else if (cmds[2] == "VESSEL_TEMP") { result = vessel_temp.ToString(); }
 			else if (cmds[2] == "EXTRASN_TEMP") { result = extrasn_temp.ToString(); }
-           // else if (cmds[2] == "PRESSURE_IN") { result = pressure_in.ToString(); }
+            else if (cmds[2] == "PRESSURE_IN") { result = pressure_in.ToString(); }
 		}
 		else if (cmds[1]->StartsWith("PUMP"))
 
